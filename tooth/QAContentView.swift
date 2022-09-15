@@ -1,10 +1,3 @@
-//
-//  QAContentView.swift
-//  tooth
-//
-//  Created by 張哲綸 on 2022/7/22.
-//
-
 import SwiftUI
 
 struct QAContentView: View {
@@ -178,6 +171,8 @@ struct QAContentView: View {
                         ExpandableText("24小時後恢復正常刷牙，請使用軟毛牙刷，或以溫水浸軟刷毛，並避開口腔內傷口位置，以免傷口再次出血。若使用牙刷小朋友仍因不適而抗拒，可使用紗布（巾）沾水清潔。",lineLimit: 3)
                             .font(.body)
                             .padding([.leading, .bottom, .trailing])
+                    }
+                    Group{
                         HStack {
                             Text("3.小孩在手術後會感到傷口處疼痛難耐嗎？")
                                 .font(.title3)
@@ -190,36 +185,28 @@ struct QAContentView: View {
                             .font(.body)
                             .padding([.leading, .bottom, .trailing])
                         HStack {
-                            Text("參考資料：\n1.https://taipei-arts-dental-clinic.com.tw/service_detail.asp?id=603\n2.https://read01.com/N5yGgn.html").font(.body)
+                            Text("參考資料：")
+                                .font(.title3)
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color(red: 0.911, green: 0.436, blue: 0.178))
                                 .padding([.leading, .bottom], 10.0)
                             Spacer()
                         }
+                        HStack {
+                            Link("台北亞緻牙醫診所,兒童牙醫舒眠麻醉常見問題Q&A,2019",
+                                 destination: URL(string:  "https://taipei-arts-dental-clinic.com.tw/service_detail.asp?id=603.https://read01.com/N5yGgn.html")!)
+                            .padding(.leading)
+                            Spacer()
+                        }
+                        HStack {
+                            Link("吉大一院 董乃夫,「全身麻醉會影響兒童的智力嗎？」,北京東區兒童醫院,2015",
+                                 destination: URL(string:  "https://read01.com/N5yGgn.html")!)
+                            .padding(.leading)
+                            Spacer()
+                        }
                     }
                 }
             }
-            /*.toolbar{
-                
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: prepareContentView(), label: {Image("全麻前bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: procedureContentView(), label: {Image("全麻中bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: noticeContentView(), label: {Image("全麻後bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: compareContentView(), label: {Image("比較bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    
-                    NavigationLink(destination:
-                        QAContentView(),label:
-                        {Image("常見問題bottombar")})
-                })
-            }*/
         }
     }
 }

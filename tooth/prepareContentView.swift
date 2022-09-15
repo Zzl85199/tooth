@@ -1,10 +1,3 @@
-//
-//  prepareContentView.swift
-//  tooth
-//
-//  Created by 張哲綸 on 2022/7/22.
-//
-
 import SwiftUI
 
 struct prepareContentView: View {
@@ -132,6 +125,7 @@ struct prepareContentView: View {
                         }
                         ExpandableText("請使用合宜推車(娃娃車或輪椅)並繫上安全帶運送，預防跌倒以維護孩童安全。",lineLimit: 3)
                             .padding(.horizontal)
+                        Divider()
                         }
                 Group{
                     HStack {
@@ -148,26 +142,6 @@ struct prepareContentView: View {
 
                 }
             }
-            /*.toolbar{
-                ToolbarItem(placement: .bottomBar,content: {
-                    
-                    NavigationLink(destination: prepareContentView(), label: {Image("全麻前bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: procedureContentView(), label: {Image("全麻中bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: noticeContentView(), label: {Image("全麻後bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: compareContentView(), label: {Image("比較bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination:
-                        QAContentView(),label:
-                        {Image("常見問題bottombar")})
-                })
-            }*/
         }
     }
 }

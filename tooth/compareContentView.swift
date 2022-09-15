@@ -1,10 +1,3 @@
-//
-//  compareContentView.swift
-//  tooth
-//
-//  Created by 張哲綸 on 2022/7/22.
-//
-
 import SwiftUI
 
 struct compareContentView: View {
@@ -92,27 +85,7 @@ struct compareContentView: View {
                     .font(.body)
                     .padding([.leading, .bottom, .trailing])
             }
-            }/*.toolbar{
-                
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: prepareContentView(), label: {Image("全麻前bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: procedureContentView(), label: {Image("全麻中bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination: noticeContentView(), label: {Image("全麻後bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    
-                    NavigationLink(destination: compareContentView(), label: {Image("比較bottombar")})
-                })
-                ToolbarItem(placement: .bottomBar,content: {
-                    NavigationLink(destination:
-                        QAContentView(),label:
-                        {Image("常見問題bottombar")})
-                })
-            }*/
+            }
         }
     }
 }

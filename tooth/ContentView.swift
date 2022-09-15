@@ -1,15 +1,7 @@
-//
-//  ContentView.swift
-//  tooth
-//
-//  Created by 張哲綸 on 2022/7/10.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    
-    
+
     var body: some View {
         NavigationView{
             ZStack{
@@ -41,8 +33,6 @@ struct ContentView: View {
                             Spacer()
                         }.padding(.bottom, 80.0)
                         HStack{
-                            /*Spacer()
-                            NavigationLink(destination: introduceContentView(), label: {Image("全麻治療介紹")})*/
                             Spacer()
                             NavigationLink(destination: QAContentView(),
                                 label:
@@ -57,8 +47,6 @@ struct ContentView: View {
         }
     }
 }
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

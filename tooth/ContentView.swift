@@ -4,7 +4,6 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView{
-            ZStack{
                 VStack {
                     ZStack{
                         Rectangle()
@@ -23,7 +22,8 @@ struct ContentView: View {
                             NavigationLink(destination: procedureContentView(), label: {Image("全麻治療程序")})
                             Spacer()
                         }
-                        .padding(.bottom, 80.0)
+                        .padding(.bottom)
+                        Spacer()
                         HStack{
                             Spacer()
                             NavigationLink(destination: noticeContentView(), label: {Image("術後注意事項")
@@ -31,7 +31,9 @@ struct ContentView: View {
                             Spacer()
                             NavigationLink(destination: compareContentView(), label: {Image("治療方式比較")})
                             Spacer()
-                        }.padding(.bottom, 80.0)
+                        }
+                        .padding(.bottom)
+                        Spacer()
                         HStack{
                             Spacer()
                             NavigationLink(destination: QAContentView(),
@@ -41,9 +43,7 @@ struct ContentView: View {
                         }
                         Spacer()
                 }
-            }
-            .padding(.bottom, 50.0)
-            .navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
